@@ -2,4 +2,4 @@
 
 ## Build Project
 
-`mvn clean install -Dfabric8.skip=true`
+`mvn clean install`

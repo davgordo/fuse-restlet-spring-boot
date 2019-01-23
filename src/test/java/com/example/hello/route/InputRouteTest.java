@@ -1,4 +1,4 @@
-package com.example.common.hello.route;
+package com.example.hello.route;
 
 import org.apache.camel.EndpointInject;
 import org.apache.camel.Produce;

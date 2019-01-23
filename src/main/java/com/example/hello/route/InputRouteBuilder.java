@@ -1,4 +1,4 @@
-package com.example.common.hello.route;
+package com.example.hello.route;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class InputRouteBuilder extends RouteBuilder {
 
-    private String out = "amq:queue:hello.message";
+    private String out = "mock:hello.message";
 
     public String getOut() { return out; }
 
@@ -21,7 +21,7 @@ public class InputRouteBuilder extends RouteBuilder {
         from("direct:input")
                 .id("enqueue-messages")
                 .convertBodyTo(String.class)
-                .log("producing message ${body} to AMQ")
+                .log("received message ${body}")
                 .to(out)
                 .removeHeaders("*")
                 .setHeader(Exchange.HTTP_RESPONSE_CODE, constant("201"))

@@ -1,6 +1,6 @@
-package com.example.common.hello.route;
+package com.example.hello.route;
 
-import com.example.common.hello.model.Message;
+import com.example.hello.model.Message;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ public class RestRouteBuilder extends RouteBuilder {
     public void configure() throws Exception {
 
         restConfiguration()
-                .contextPath("/common-hello").apiContextPath("/api-doc")
+                .contextPath("/hello").apiContextPath("/api-doc")
                     .apiProperty("api.title", "Hello API")
                     .apiProperty("api.version", "1.0")
                     .apiProperty("cors", "true")

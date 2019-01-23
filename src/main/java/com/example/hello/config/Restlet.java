@@ -1,4 +1,4 @@
-package com.example.common.hello.config;
+package com.example.hello.config;
 
 import org.apache.camel.component.servlet.CamelHttpTransportServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
